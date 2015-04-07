@@ -8,7 +8,7 @@ ADD ssh/keys /root/.ssh
 
 ADD ssh/config /root/.ssh/
 
-RUN chmod 600 /root/.ssh/config
+RUN chmod -vR 600 /root/.ssh/*
 
 RUN yum clean all; yum -y install git;
 
