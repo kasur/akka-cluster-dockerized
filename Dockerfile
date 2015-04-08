@@ -10,8 +10,6 @@ ADD ssh/config /root/.ssh/
 
 RUN chmod -vR 600 /root/.ssh/*
 
-RUN yum clean all; yum -y install git;
-
 RUN ssh-keyscan -T 60 bitbucket.org > /root/.ssh/known_hosts
 
 RUN git clone git@bitbucket.org:kasur/akka-cluster.git /opt/akka-cluster
