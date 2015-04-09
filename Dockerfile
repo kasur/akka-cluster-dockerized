@@ -16,8 +16,8 @@ RUN git clone git@bitbucket.org:kasur/akka-cluster.git /opt/akka-cluster
 
 WORKDIR /opt/akka-cluster
 
-RUN sbt stage
+RUN sbt compile
 
 ENV APP_PORT=8888
 
-CMD ["./target/universal/stage/bin/akka-cluster"]
+CMD ["sbt", "run"]
