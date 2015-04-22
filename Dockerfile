@@ -27,4 +27,4 @@ RUN sbt stage
 
 ENV APP_PORT=8888
 
-CMD ["target/universal/stage/bin/akka-cluster"]
+CMD ["cluster/target/universal/stage/bin/akka-cluster"]
